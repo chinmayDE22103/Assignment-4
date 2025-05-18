@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Implementation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- BMI Calculator Section -->
+    <section class="calculator-section">
+        <h2>BMI Calculator</h2>
+        <div class="input-group">
+            <input type="number" id="weight" placeholder="Weight (kg)">
+            <input type="number" id="height" placeholder="Height (m)">
+            <button onclick="calculateBMI()">Calculate BMI</button>
+        </div>
+        <p id="bmiResult"></p>
+    </section>
+
+    <!-- Temperature Converter -->
+    <section class="calculator-section">
+        <h2>Temperature Converter</h2>
+        <div class="input-group">
+            <input type="number" id="celsius" placeholder="Celsius">
+            <button onclick="convertTemperature()">Convert to Fahrenheit</button>
+        </div>
+        <p id="tempResult"></p>
+    </section>
+
+    <!-- Dynamic User Table -->
+    <section class="table-section">
+        <h2>User List</h2>
+        <button onclick="addUser()">Add New User</button>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody"></tbody>
+        </table>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="form-section">
+        <h2>Registration Form</h2>
+        <form id="registrationForm" onsubmit="handleRegistration(event)">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Name" onkeyup="validateName()">
+                <span class="validation-message" id="nameError"></span>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email" onkeyup="validateEmail()">
+                <span class="validation-message" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="phone" placeholder="Phone" onkeyup="validatePhone()">
+                <span class="validation-message" id="phoneError"></span>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Password" onkeyup="validatePassword()">
+                <span class="validation-message" id="passwordError"></span>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather-section">
+        <h2>Weather Information</h2>
+        <div class="input-group">
+            <input type="text" id="city" placeholder="Enter city name">
+            <button onclick="getWeather()">Get Weather</button>
+        </div>
+        <div id="weatherResult"></div>
+    </section>
+
+    <!-- Date and Random Number -->
+    <section class="utility-section">
+        <h2>Utilities</h2>
+        <div id="currentDateTime"></div>
+        <button onclick="generateRandomNumber()">Generate Random Number</button>
+        <p id="randomNumber"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
